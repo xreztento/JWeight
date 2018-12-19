@@ -1,12 +1,13 @@
 package org.weight.jmeter.timers;
 
-import java.beans.PropertyDescriptor;
 import org.apache.jmeter.testbeans.BeanInfoSupport;
 
-public class DistributedSyncTimerBeanInfo extends BeanInfoSupport {
+import java.beans.PropertyDescriptor;
 
-    public DistributedSyncTimerBeanInfo() {
-        super(DistributedSyncTimer.class);
+public class RDistributedSyncTimerBeanInfo extends BeanInfoSupport {
+
+    public RDistributedSyncTimerBeanInfo() {
+        super(RDistributedSyncTimer.class);
 
         createPropertyGroup("grouping", new String[] { "groupSize", "timeoutInMs" });
         createPropertyGroup("subscribedServer", new String[] { "subscribedServerIpAddress", "subscribedServerIpPort", "channelName" });
@@ -31,5 +32,6 @@ public class DistributedSyncTimerBeanInfo extends BeanInfoSupport {
         p.setValue(NOT_UNDEFINED, Boolean.TRUE);
         p.setValue(DEFAULT, String.valueOf("default"));
     }
+
 
 }
